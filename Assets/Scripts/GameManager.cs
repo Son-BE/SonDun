@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button gameStart;
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject utilityBox;
+    [SerializeField] private GameObject statusTop;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,6 @@ public class GameManager : MonoBehaviour
     {
         player.SetActive(true);
         utilityBox.SetActive(true);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+        statusTop.SetActive(true);
+    }       
 }
