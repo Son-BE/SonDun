@@ -12,12 +12,19 @@ public class ItemData : MonoBehaviour
         instance = this;
     }
 
+    
     public List<Item> itemData = new List<Item>();
-    public GameObject ItemPrefab;
-
+    public GameObject dropItemPrefab;
+    public Vector2[]pos;
 
     private void Start()
     {
+        for(int i = 0; i< 5; i++)
+        {
+            GameObject go = Instantiate(dropItemPrefab, pos[i],Quaternion.identity);
+            go.GetComponent<DropItem>().SetItem(itemData[Random.Range(0,3)]);
+        }
+        
         money = 1500;
         
     }
